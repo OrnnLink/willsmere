@@ -1,0 +1,48 @@
+<!Doctype HTML>
+<html>
+	<head>
+		<link rel="stylesheet" href="style/style.css">
+	</head>
+	<body class="flex-box justify-center" style="flex-direction: column;">
+		<!-- <section class="flex-box search-bar"> -->
+			<!-- <div class="img-box flex-box justify-start" style="width: 5%; margin:5px;">
+				<img src="assets/images/search.png">
+			</div> -->
+		<!-- </section> -->
+		<div class="flex-box search-bar justify-center">
+			<input id="firstname-search" list="firstname-list" type="text" placeholder="Firstname">
+			<datalist id="firstname-list"> 
+			</datalist>
+
+			<input id="lastname-search" list="lastname-list" type="text" placeholder="Lastname">
+			<datalist id="lastname-list"> 
+			</datalist>
+			<button id="search-btn">Search</button>
+		</div>
+		<div class="search-result flex-box">
+			<section class="flex-box" style="flex-direction: column">
+				<section class="display-box flex-box">
+					<span>Name</span>
+					<span id="data-name"></span>
+				</section>
+				<section class="display-box flex-box">
+					<span>Shelf</span>
+					<span id="data-shelf"></span>
+				</section>
+				<section class="display-box flex-box">
+					<span>Level</span>
+					<span id="data-level"></span>
+				</section>
+				<section class="display-box flex-box">
+					<span>Row</span>
+					<span id="data-row"></span>
+				</section>
+				<section class="display-box flex-box">
+					<span>Column</span>
+					<span id="data-column"></span>
+				</section>
+			</section>
+		</div>
+		<script src="scripts/pbox.js"></script>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface");
+
+* {
+	margin: 0px;
+	min-width: 0px;
+	min-height: 0px;
+}
+
+body {
+	background-color: var(--accent-color);
+	box-sizing: border-box;
+	padding: 2em;
+	flex-direction: column;
+}
+
+:root {
+	--primary-color: #E6A4B4;
+	--secondary-color: #F3D7CA;
+	--tertiary-color: #FFF8E3;
+	--accent-color: #F5EEE6;
+}  
+
+.bold-text {
+	font-family: "Abril Fatface";
+	
+}
