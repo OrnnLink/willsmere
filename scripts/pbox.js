@@ -10,6 +10,12 @@ class PBox {
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
+	let pbox_history = [];
+	if (localStorage.getItem("pbox_history")) {
+		pbox_history = JSON.parse(localStorage.getItem("pbox_history"));
+	}
+	update_history("", "", pbox_history);
+
     const filename = "assets/data/pbox.txt";
     let pbox; // Declare the variable
 
@@ -47,6 +53,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     	if (result) {
     		// display_result(result);
     		display_search_result(result);
+    		update_history(fnSearchBar.value, lnSearchBar.value, pbox_history);
     	}
     })
 
@@ -167,4 +174,46 @@ const display_search_result = (data) => {
 		}
 	)
 	
+}
+
+const update_history = (fn, ln, list) => {
+	const newValue = `${ln.toLowerCase()}, ${fn.toLowerCase()}`;
+
+	const history = document.getElementById("search-history");
+	history.innerHTML = "";
+
+	if (!list.includes(newValue) && fn && ln) { 
+		if (list.length >= 10) {
+			list.shift();
+		}
+		list.push(newValue);
+	}
+
+
+	localStorage.setItem("pbox_history", JSON.stringify(list));
+	list.forEach(
+		(name) => { 
+			const container = document.createElement("a");
+			container.classList.add("history-box");
+			container.classList.add("flex-box");
+
+			const span = document.createElement("span"); 
+			span.style.width = "100%";
+			span.textContent = name;
+
+			container.appendChild(span);
+			history.appendChild(container);
+
+			container.addEventListener("click", () => {
+			    const fnSearchBar = document.getElementById("firstname-search");
+			    const lnSearchBar = document.getElementById("lastname-search");
+
+			    const [lastname, firstname] = name.split(", ");
+			    fnSearchBar.value = firstname;
+			    lnSearchBar.value = lastname;
+			    console.log(fnSearchBar);
+			});
+		}
+	)
+
 }
