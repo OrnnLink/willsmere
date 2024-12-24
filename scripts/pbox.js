@@ -57,6 +57,15 @@ document.addEventListener("DOMContentLoaded", async () => {
     	}
     })
 
+	  const triggerSearchOnEnter = (event) => {
+	    if (event.key === "Enter") {
+	        event.preventDefault();
+	        searchBtn.click();
+	    }
+	};
+
+	fnSearchBar.addEventListener("keypress", triggerSearchOnEnter);
+	lnSearchBar.addEventListener("keypress", triggerSearchOnEnter);
     const clearBtn = document.getElementById("clear-btn");
     clearBtn.addEventListener("click", () => {
     	fnSearchBar.value = "";
@@ -182,7 +191,7 @@ const update_history = (fn, ln, list) => {
 	const history = document.getElementById("search-history");
 	history.innerHTML = "";
 
-	if (!list.includes(newValue) && fn && ln) { 
+	if (!list.includes(newValue) && (fn || ln)) { 
 		if (list.length >= 10) {
 			list.shift();
 		}
