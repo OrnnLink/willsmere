@@ -34,12 +34,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     const lnDatalist = document.getElementById("lastname-list");
 
     fnSearchBar.addEventListener("input", () => {
-        updateDatalist(fnSearchBar.value, firstnames, fnDatalist);
+        updateDatalist(fnSearchBar.value.toLowerCase(), firstnames, fnDatalist);
     });
 
     // Add input event listener for lastnames
     lnSearchBar.addEventListener("input", () => {
-        updateDatalist(lnSearchBar.value, lastnames, lnDatalist);
+        updateDatalist(lnSearchBar.value.toLowerCase(), lastnames, lnDatalist);
     });
 
     const searchBtn = document.getElementById("search-btn");
@@ -61,7 +61,7 @@ const filtered_data = (pbox) => {
 			const [firstname, lastname, shelf, level, row, column] = line.split(";");
 			if (firstname && lastname) {
 				firstnames.push(firstname.trim().toLowerCase());
-				lastnames.push(lastname.toLowerCase());
+				lastnames.push(lastname.trim().toLowerCase());
 				data.push(new PBox(
 					firstname.trim().toLowerCase(), 
 					lastname.trim().toLowerCase(),
