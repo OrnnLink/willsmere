@@ -77,7 +77,7 @@ const filtered_data = (pbox) => {
 const updateDatalist = (query, list, datalistElement) => {
     // Clear existing options
     datalistElement.innerHTML = "";
-    console.log(query, list);
+    console.log(query, list, datalistElement);
 
     // Filter the list based on user input and remove duplicates
     const filtered = [...new Set(list.filter((item) => 
