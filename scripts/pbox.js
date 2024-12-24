@@ -26,8 +26,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     pbox = pbox.split("\n");
 
     const [firstnames, lastnames, data] = filtered_data(pbox);
-
-  	const fnSearchBar = document.getElementById("firstname-search");
+    console.log(lastnames);	
+    const fnSearchBar = document.getElementById("firstname-search");
     const fnDatalist = document.getElementById("firstname-list");
 
     const lnSearchBar = document.getElementById("lastname-search");
@@ -77,6 +77,7 @@ const filtered_data = (pbox) => {
 const updateDatalist = (query, list, datalistElement) => {
     // Clear existing options
     datalistElement.innerHTML = "";
+    console.log(query, list);
 
     // Filter the list based on user input and remove duplicates
     const filtered = [...new Set(list.filter((item) => 
