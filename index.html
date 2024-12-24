@@ -3,47 +3,44 @@
 	<head>
 		<link rel="stylesheet" href="style/style.css">
 	</head>
-	<body class="flex-box justify-center" style="flex-direction: column;">
-		<!-- <section class="flex-box search-bar"> -->
-			<!-- <div class="img-box flex-box justify-start" style="width: 5%; margin:5px;">
-				<img src="assets/images/search.png">
-			</div> -->
-		<!-- </section> -->
-		<div class="flex-box search-bar justify-center">
-			<input id="firstname-search" list="firstname-list" type="text" placeholder="Firstname">
-			<datalist id="firstname-list"> 
-			</datalist>
-		</input>
-
-			<input id="lastname-search" list="lastname-list" type="text" placeholder="Lastname">
-			<datalist id="lastname-list"> 
-			</datalist>
-		</input>
-			<button id="search-btn">Search</button>
-		</div>
-		<div class="search-result flex-box">
-			<section class="flex-box" style="flex-direction: column">
-				<section class="display-box flex-box">
-					<span>Name</span>
-					<span id="data-name"></span>
-				</section>
-				<section class="display-box flex-box">
-					<span>Shelf</span>
-					<span id="data-shelf"></span>
-				</section>
-				<section class="display-box flex-box">
-					<span>Level</span>
-					<span id="data-level"></span>
-				</section>
-				<section class="display-box flex-box">
-					<span>Row</span>
-					<span id="data-row"></span>
-				</section>
-				<section class="display-box flex-box">
-					<span>Column</span>
-					<span id="data-column"></span>
-				</section>
-			</section>
+	<body class="col-flex-box justify-center">
+		<div class="flex-box">
+			<div class="col-flex-box" style="width: 90%">
+				<div class="flex-box search-bar justify-center">
+					<section class="flex-box justify-space-evenly align-center" style="width: 50%;"> 
+						<span>Firstname</span>
+						<input 
+							id="firstname-search" 
+							list="firstname-list" 
+							type="text" 
+							placeholder="Firstname"
+							style="min-height: 30px;"
+						>
+						<datalist id="firstname-list"> 
+						</datalist>
+						</input>
+					</section> 
+					<section class="flex-box justify-space-evenly align-center" style="width: 50%;"> 
+						<span>Lastname</span>
+						<input 
+							id="lastname-search" 
+							list="lastname-list" 
+							type="text" 
+							placeholder="Lastname"
+							style="min-height: 30px;"
+						>
+						<datalist id="lastname-list"> 
+						</datalist>
+						</input>
+					</section>
+					<button id="search-btn" class="page-btn">Search</button>
+					<button id="clear-btn" class="page-btn">Clear</button>
+				</div>
+				<div id="search-result" class="search-result flex-box" style="flex-direction: column;">
+				</div>
+			</div>
+			<div class="search-history flex-box">
+			</div>
 		</div>
 		<script src="scripts/pbox.js"></script>
 	</body>

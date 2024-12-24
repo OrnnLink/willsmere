@@ -24,7 +24,7 @@ Nortiesslyn;Blumhoff;2;3;1;2
 Noah;Blumhoff;2;3;1;2
 Helen;Kift;2;3;2;2
 Jenny;Chimenello;2;3;1;3
-Grames;Bates;2;3;1;3
+Graemes;Bates;2;3;1;3
 Joe;Mansour;2;3;2;3
 Leila;Lynton;2;4;1;1
 Vasilios;Papageorgiou;2;4;2;1
@@ -51,7 +51,7 @@ Therese;Giuliano;2;6;2;3
 Anastasia;Plessias;2;3;1;3
 Wayne;Aquilina;3;1;1;1
 Barbara;Czokow;3;1;2;1
-Daniela;Clark;3;1;1;2
+Daniela;Clarke;3;1;1;2
 Shane;Brewer;3;1;2;2
 James;Caddy;3;1;2;2
 Byron-Paul;Blakey;3;1;3;2
@@ -71,7 +71,7 @@ Mark;Blyth;3;3;2;1
 Bradley;Chan;3;3;1;2
 Anthony;Moore;3;3;2;2
 John;Byrne;3;3;1;3
-Christine;Hodgs;3;3;2;3
+Christine;Hodges;3;3;2;3
 Stuart;Hutchinson;3;3;2;3
 Lucinda;Rietbergen;3;4;1;1
 John;Bates;3;4;2;1
@@ -81,7 +81,7 @@ Lorraine;Larter;3;4;1;3
 Alana;Lloyd;3;4;1;3
 Neil;Thompson;3;4;2;3
 David;Hearn;3;5;1;1
-Dean;Hopper;3;5;2;1
+Dean;Hooper;3;5;2;1
 John;Dusink;3;5;3;1
 Charlotte;Kitchingman;3;5;1;2
 Christopher;Judd;3;5;1;2
@@ -103,6 +103,7 @@ David;Ponting;4;1;1;1
 David;Gaskell;4;1;2;1
 Patrick;Reed;4;1;1;2
 Thomas;Risler;4;1;2;2
+Scott;Veale;4;1;1;2
 Cathy;Stephen;4;1;2;2
 John;Williams;4;1;2;2
 Harry;Spiteri;4;1;1;3
