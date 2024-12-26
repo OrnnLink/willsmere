@@ -47,7 +47,7 @@ Stuart;Skerritt;2;6;1;2
 Barbara;Skerritt;2;6;1;2
 Basile;Argyris;2;6;2;2
 Roderick;Pollard;2;6;1;3
-Therese;Giuliano;2;6;2;3
+Therese;Giuliano;3;5;1;3
 Anastasia;Plessias;2;3;1;3
 Wayne;Aquilina;3;1;1;1
 Barbara;Czokow;3;1;2;1
