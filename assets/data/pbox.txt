@@ -20,8 +20,8 @@ Margot;Erlich;2;2;1;2
 Angelique;Kotsias;2;2;1;3
 Elaine;Hutchinson;2;3;1;1 
 Susan;O'Connell;2;3;2;1
-Nortiesslyn;Blumhoff;2;3;1;2
-Noah;Blumhoff;2;3;1;2
+Nortiesslyn;Blumhoff;2;5;1;3
+Noah;Blumhoff;2;5;1;3
 Helen;Kift;2;3;2;2
 Jenny;Chimenello;2;3;1;3
 Graemes;Bates;2;3;1;3
