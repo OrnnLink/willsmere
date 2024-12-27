@@ -76,34 +76,54 @@ document.addEventListener("DOMContentLoaded", async () => {
 const filtered_data = (pbox) => {
 	const firstnames = [];
 	const lastnames = [];
+	const fnMap = new Map();
+	const lnMap = new Map();
 	const data = [];
 
 	pbox.forEach( 
 		(line) => {
 			const [firstname, lastname, shelf, level, row, column] = line.split(";");
 			if (firstname && lastname) {
-				firstnames.push(firstname.trim().toLowerCase());
-				lastnames.push(lastname.trim().toLowerCase());
+				const fnValue = firstname.trim().toLowerCase();
+				const lnValue = lastname.trim().toLowerCase();
+				firstnames.push(fnValue);
+				lastnames.push(lnValue);
+				
+				if (!fnMap.has(fnValue)) {
+					fnMap.set(fnValue)[0], []);
+				}
+				fnMap.get(fnValue[0]).push(fnValue);
+
+				if (!lnMap.has(lnValue)) {
+					lnMap.set(lnValue[0], []);
+				}
+				lnMap.get(lnValue[0]).push(lnValue);
+				
 				data.push(new PBox(
-					firstname.trim().toLowerCase(), 
-					lastname.trim().toLowerCase(),
+					fnValue, 
+					lnValue,
 					shelf, level, row, column
 				)
 				)
 			}
 		}
 	)
-	return [firstnames, lastnames, data];
+	return [fnMap, lnMap, data];
 }
 
 const updateDatalist = (query, list, datalistElement) => {
+	
     // Clear existing options
+    if (query.length !== 1) {
+	    return;
+    }
     datalistElement.innerHTML = "";
 
     // Filter the list based on user input and remove duplicates
-    const filtered = [...new Set(list.filter((item) => 
-        item.startsWith(query.toLowerCase())
-    ))];
+    // const filtered = [...new Set(list.filter((item) => 
+    //     item.startsWith(query.toLowerCase())
+    // ))];
+    const filtered = list.get(query[0]);
 
     // Add new options
     filtered.forEach((item) => {
