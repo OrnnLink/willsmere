@@ -120,7 +120,7 @@ Faye;Reidy;4;3;2;1
 Kim;Vlahovic;4;3;2;1
 Sietze;Tendam;4;3;1;2
 Sietze;Tendam;4;3;2;2
-Brigitte;Walter;4;3;2;3
+Brigitte;Walter;4;3;1;3
 Batsun;Vuong;4;4;1;1
 Nicholas;Bywater;4;4;2;1
 David;West;4;4;1;2
