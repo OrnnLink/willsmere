@@ -71,8 +71,8 @@ Mark;Blyth;3;3;2;1
 Bradley;Chan;3;3;1;2
 Anthony;Moore;3;3;2;2
 John;Byrne;3;3;2;3
-Christine;Hodges;3;3;2;3
-Stuart;Hutchinson;3;3;2;3
+Christine;Hodges;4;3;2;3
+Stuart;Hutchinson;4;3;2;3
 Lucinda;Rietbergen;3;4;1;1
 John;Bates;3;4;2;1
 Timothy;Elson;3;4;1;2
