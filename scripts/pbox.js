@@ -32,6 +32,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     pbox = pbox.split("\n");
 
     const [firstnames, lastnames, data] = filtered_data(pbox);
+	console.log(firstnames);
+	console.log(lastnames);
     const fnSearchBar = document.getElementById("firstname-search");
     const fnDatalist = document.getElementById("firstname-list");
 
