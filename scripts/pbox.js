@@ -90,7 +90,7 @@ const filtered_data = (pbox) => {
 				lastnames.push(lnValue);
 				
 				if (!fnMap.has(fnValue)) {
-					fnMap.set(fnValue)[0], []);
+					fnMap.set(fnValue[0], []);
 				}
 				fnMap.get(fnValue[0]).push(fnValue);
 
