@@ -32,8 +32,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     pbox = pbox.split("\n");
 
     const [firstnames, lastnames, data] = filtered_data(pbox);
-	console.log(firstnames);
-	console.log(lastnames);
     const fnSearchBar = document.getElementById("firstname-search");
     const fnDatalist = document.getElementById("firstname-list");
 
@@ -242,12 +240,7 @@ const update_history = (fn, ln, list) => {
 			    const [lastname, firstname] = name.split(", ");
 			    fnSearchBar.value = firstname;
 			    lnSearchBar.value = lastname;
-				const result = search(fnSearchBar.value.toLowerCase(), lnSearchBar.value.toLowerCase(), data); 
-    	if (result) {
-    		// display_result(result);
-    		display_search_result(result);
-    		update_history(fnSearchBar.value, lnSearchBar.value, pbox_history);
-    	}
+	
 
 			});
 		}
